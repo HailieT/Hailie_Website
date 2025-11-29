@@ -13,10 +13,32 @@
             margin-right: 10%;
             border-block-color: pink;
             font-size: 25px;
+            background-image: url('Pink_Blue_Background.gif');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            position: relative;
+        }
+
+            body::before {
+                content: '';
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-color: rgba(255, 255, 255, 0.2); /* white overlay at 70% opacity */
+                pointer-events: none;
+                z-index: 0;
+            }
+
+        main {
+            position: relative;
+            z-index: 1; /* Ensure main content is above the overlay */
         }
     </style>
 </head>
-<body class="bg-rose-50 text-pink-800">
+<body class="text-pink-800">
 
     <!-- Header & Navigation -->
     <header class="bg-white shadow-md sticky top-0 z-50">
@@ -44,7 +66,7 @@
 
     <main>
         <!-- Hero Section -->
-        <section id="home" class="bg-pink-50">
+        <section id="home" >
             <div class="container mx-auto px-6 py-20 md:py-32 flex flex-col md:flex-row items-center">
                 <div class="md:w-1/2 text-center md:text-left mb-10 md:mb-0">
                     <h1 class="text-4xl md:text-5xl font-bold text-pink-900 leading-tight mb-4"> Hailie Tucker</h1>
@@ -60,7 +82,7 @@
         </section>
 
         <!-- About Me & Skills Section -->
-        <section id="about" class="py-20 bg-pink-50">
+        <section id="about" >
             <div class="container mx-auto px-6">
                 <div class="text-center mb-12">
                     <h2 class="text-3xl font-bold">About Me</h2>
@@ -91,7 +113,7 @@
         </section>
 
         <!-- Experience & Education Section -->
-        <section id="experience" class="py-20 bg-pink-50">
+        <section id="experience" >
             <div class="container mx-auto px-6">
                 <div class="text-center mb-12">
                     <h2 class="text-3xl font-bold">Experience & Education</h2>
@@ -104,8 +126,8 @@
                             <time class="sm:absolute left-0 translate-y-0.5 inline-flex items-center justify-center text-xs font-semibold uppercase w-28 h-6 mb-3 sm:mb-0 text-rose-600 bg-rose-200 rounded-full">Fall 2023 - Present  </time>
                             <a href="https://www.fsu.edu/" class="text-xl text-pink-900 font-bold hover:underline" target="_blank" rel="noopener noreferrer">Florida State University &rarr;</a>
                         </div>
-                        <div class="text-pink-500">B.S. in Computer Science</div>
-                        <div class="text-sm text-pink-400 mt-1">Relevant Coursework: Computer org 1, VR development, data structures and algoriths 2</div>
+                        <div class="text-pink-800">B.S. in Computer Science</div>
+                        <div class="text-med text-pink-400 mt-1">Relevant Coursework: Computer org 1, VR development, data structures and algoriths 2</div>
                     </div>
                     <!-- Timeline Item 2 -->
                     <div class="relative pl-8 sm:pl-32 py-6 group">
@@ -113,8 +135,8 @@
                             <time class="sm:absolute left-0 translate-y-0.5 inline-flex items-center justify-center text-xs font-semibold uppercase w-28 h-6 mb-3 sm:mb-0 text-rose-600 bg-rose-200 rounded-full">Summer 2024 - Present  </time>
                             <a href="https://housing.fsu.edu/future-residents/living-on-campus/residence-life-staff" class="text-xl text-pink-900 font-bold hover:underline" target="_blank" rel="noopener noreferrer">Desk Assistant &rarr;</a>
                         </div>
-                        <div class="text-pink-500">Desk Assistant at Florida State University </div>
-                        <div class="text-sm text-pink-400 mt-1">Worked with a team to cover an assigned hub desk 24 hours a day.</div>
+                        <div class="text-pink-800">Desk Assistant at Florida State University </div>
+                        <div class="text-med text-pink-400 mt-1">Worked with a team to cover an assigned hub desk 24 hours a day.</div>
                     </div>
                     <!-- Timeline Item 3 -->
                     <div class="relative pl-8 sm:pl-32 py-6 group">
@@ -122,8 +144,8 @@
                             <time class="sm:absolute left-0 translate-y-0.5 inline-flex items-center justify-center text-xs font-semibold uppercase w-28 h-6 mb-3 sm:mb-0 text-rose-600 bg-rose-200 rounded-full">Summer 2025 - Present  </time>
                             <a href="https://arcvale.com/" class="text-xl text-pink-900 font-bold hover:underline" target="_blank" rel="noopener noreferrer">Arcvale &rarr;</a>
                         </div>
-                        <div class="text-pink-500">Arcvale Intern</div>
-                        <div class="text-sm text-pink-400 mt-1"> Worked on UI modifications and minor bug fixes. Collaborated with a team of developers in an agile environment.</div>
+                        <div class="text-pink-800">Arcvale Intern</div>
+                        <div class="text-med text-pink-400 mt-1"> Worked on UI modifications and minor bug fixes. Collaborated with a team of developers in an agile environment.</div>
                     </div>
                     <!-- Timeline Item 4 -->
                     <div class="relative pl-8 sm:pl-32 py-6 group">
@@ -131,14 +153,14 @@
                             <time class="sm:absolute left-0 translate-y-0.5 inline-flex items-center justify-center text-xs font-semibold uppercase w-28 h-6 mb-3 sm:mb-0 text-rose-600 bg-rose-200 rounded-full">Fall 2025 - Present  </time>
                             <a href="https://fsu.devlup.org/" class="text-xl text-pink-900 font-bold hover:underline" target="_blank" rel="noopener noreferrer">DevLUp &rarr;</a>
                         </div>
-                        <div class="text-pink-500">DevLUp Social Chair</div>
-                        <div class="text-sm text-pink-400 mt-1"> Created a LinkedIn, and now control the instagram. My main goal is to spread awareness of the club and get new members. So far I have already orchastrated a collab with WiCS (Women in Computer Science) which is a group that falls under the FSU chapter of ACM.</div>
+                        <div class="text-pink-800">DevLUp Social Chair</div>
+                        <div class="text-med text-pink-400 mt-1"> Created a LinkedIn, and now control the instagram. My main goal is to spread awareness of the club and get new members. So far I have already orchastrated a collab with WiCS (Women in Computer Science) which is a group that falls under the FSU chapter of ACM.</div>
                     </div>
                 </div>
             </div>
         </section>
         <!-- Projects Section -->
-        <section id="projects" class="bg-pink-50 py-20">
+        <section id="projects" >
             <div class="container mx-auto px-6">
                 <div class="text-center mb-12">
                     <h2 class="text-3xl font-bold">My Projects</h2>
@@ -178,6 +200,7 @@
                         <div class="p-6">
                             <h3 class="text-xl font-bold mb-2">Viverse</h3>
                             <p class="text-pink-400 mb-4">My VR submission to the Viverse college game creation competition.</p>
+                            <a href="https://hailiet.itch.io/haven" class="text-rose-600 font-semibold hover:underline" target="_blank" rel="noopener noreferrer">View online! &rarr;</a> <br />
                             <a href="https://github.com/HailieT/Viverse" class="text-rose-600 font-semibold hover:underline" target="_blank" rel="noopener noreferrer">View on GitHub &rarr;</a>
                         </div>
                     </div>
@@ -187,6 +210,7 @@
                         <div class="p-6">
                             <h3 class="text-xl font-bold mb-2">Game Jam</h3>
                             <p class="text-pink-400 mb-4">I participated with Jacksons team to make a spooky game to be uploaded in itch.</p>
+                            <a href="https://jdevo.itch.io/spidersol" class="text-rose-600 font-semibold hover:underline" target="_blank" rel="noopener noreferrer">View online! &rarr;</a> <br />
                             <a href="https://github.com/jdevo22/HalloweenGameJam2025" class="text-rose-600 font-semibold hover:underline" target="_blank" rel="noopener noreferrer">View on GitHub &rarr;</a>
                         </div>
                     </div>
@@ -205,7 +229,7 @@
         </section>
 
         <!-- Contact Section -->
-        <section id="contact" class="py-20 bg-pink-50">
+        <section id="contact" >
             <div class="container mx-auto px-6 text-center">
                 <h2 class="text-3xl font-bold mb-4">Got something to tell me?</h2>
                 <p class="text-pink-400 md:w-2/3 mx-auto leading-relaxed mb-8">Feel free to reach out to me via email or social media!</p>
@@ -231,6 +255,7 @@
                         <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 512 512" aria-hidden="false">
                             <path d="M71.92 34.77C50.2 47.67 7.4 96.84 7 109.73v21.34c0 27.06 25.29 50.84 48.25 50.84 27.57 0 50.54-22.85 50.54-50 0 27.12 22.18 50 49.76 50s49-22.85 49-50c0 27.12 23.59 50 51.16 50h.5c27.57 0 51.16-22.85 51.16-50 0 27.12 21.47 50 49 50s49.76-22.85 49.76-50c0 27.12 23 50 50.54 50 23 0 48.25-23.78 48.25-50.84v-21.34c-.4-12.9-43.2-62.07-64.92-75C372.56 32.4 325.76 32 256 32S91.14 33.1 71.92 34.77zm132.32 134.39c-22 38.4-77.9 38.71-99.85.25-13.17 23.14-43.17 32.07-56 27.66-3.87 40.15-13.67 237.13 17.73 269.15 80 18.67 302.08 18.12 379.76 0 31.65-32.27 21.32-232 17.75-269.15-12.92 4.44-42.88-4.6-56-27.66-22 38.52-77.85 38.1-99.85-.24-7.1 12.49-23.05 28.94-51.76 28.94a57.54 57.54 0 0 1-51.75-28.94zm-41.58 53.77c16.47 0 31.09 0 49.22 19.78a436.91 436.91 0 0 1 88.18 0C318.22 223 332.85 223 349.31 223c52.33 0 65.22 77.53 83.87 144.45 17.26 62.15-5.52 63.67-33.95 63.73-42.15-1.57-65.49-32.18-65.49-62.79-39.25 6.43-101.93 8.79-155.55 0 0 30.61-23.34 61.22-65.49 62.79-28.42-.06-51.2-1.58-33.94-63.73 18.67-67 31.56-144.45 83.88-144.45zM256 270.79s-44.38 40.77-52.35 55.21l29-1.17v25.32c0 1.55 21.34.16 23.33.16 11.65.54 23.31 1 23.31-.16v-25.28l29 1.17c-8-14.48-52.35-55.24-52.35-55.24z" />
                         </svg>
+                        <br />
                     </a>
                 </div>
             </div>
