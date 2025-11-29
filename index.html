@@ -16,10 +16,10 @@
             background-image: url('Pink_Blue_Background.gif');
             background-size: cover;
             background-position: center;
-            background-attachment: scroll; /* Changed from fixed to scroll for mobile */
+            background-attachment: scroll;
             background-repeat: no-repeat;
             position: relative;
-            min-height: 100vh; /* Ensure body covers full viewport */
+            min-height: 100vh;
         }
 
         /* Desktop only: use fixed background */
@@ -45,9 +45,173 @@
             position: relative;
             z-index: 1;
         }
+
+        /* Floating Hearts Animation */
+        .heart {
+            position: fixed;
+            width: 30px;
+            height: 30px;
+            pointer-events: none;
+            animation: float 15s infinite;
+            z-index: 1;
+            opacity: 0;
+        }
+
+            .heart svg {
+                width: 100%;
+                height: 100%;
+                fill: #ec4899;
+                opacity: 0.6;
+                filter: drop-shadow(0 0 3px rgba(236, 72, 153, 0.4));
+            }
+
+        @keyframes float {
+            0% {
+                transform: translateY(100vh) rotate(0deg) scale(0.5);
+                opacity: 0;
+            }
+
+            10% {
+                opacity: 0.8;
+            }
+
+            90% {
+                opacity: 0.8;
+            }
+
+            100% {
+                transform: translateY(-100vh) rotate(360deg) scale(1);
+                opacity: 0;
+            }
+        }
+
+        /* Stagger the hearts with varying sizes */
+        .heart:nth-child(1) {
+            left: 10%;
+            animation-delay: 0s;
+            width: 25px;
+            height: 25px;
+        }
+
+        .heart:nth-child(2) {
+            left: 20%;
+            animation-delay: 3s;
+            width: 20px;
+            height: 20px;
+        }
+
+        .heart:nth-child(3) {
+            left: 30%;
+            animation-delay: 6s;
+            width: 28px;
+            height: 28px;
+        }
+
+        .heart:nth-child(4) {
+            left: 40%;
+            animation-delay: 2s;
+            width: 22px;
+            height: 22px;
+        }
+
+        .heart:nth-child(5) {
+            left: 50%;
+            animation-delay: 8s;
+            width: 30px;
+            height: 30px;
+        }
+
+        .heart:nth-child(6) {
+            left: 60%;
+            animation-delay: 4s;
+            width: 26px;
+            height: 26px;
+        }
+
+        .heart:nth-child(7) {
+            left: 70%;
+            animation-delay: 7s;
+            width: 24px;
+            height: 24px;
+        }
+
+        .heart:nth-child(8) {
+            left: 80%;
+            animation-delay: 1s;
+            width: 21px;
+            height: 21px;
+        }
+
+        .heart:nth-child(9) {
+            left: 90%;
+            animation-delay: 5s;
+            width: 27px;
+            height: 27px;
+        }
+
+        .heart:nth-child(10) {
+            left: 15%;
+            animation-delay: 9s;
+            width: 23px;
+            height: 23px;
+        }
     </style>
 </head>
 <body class="text-pink-800">
+    <!-- Floating Hearts -->
+    <div class="hearts-container">
+        <div class="heart">
+            <svg viewBox="0 0 32 29.6">
+                <path d="M23.6,0c-3.4,0-6.3,2.7-7.6,5.6C14.7,2.7,11.8,0,8.4,0C3.8,0,0,3.8,0,8.4c0,9.4,9.5,11.9,16,21.2c6.1-9.3,16-12.1,16-21.2C32,3.8,28.2,0,23.6,0z" />
+            </svg>
+        </div>
+        <div class="heart">
+            <svg viewBox="0 0 32 29.6">
+                <path d="M23.6,0c-3.4,0-6.3,2.7-7.6,5.6C14.7,2.7,11.8,0,8.4,0C3.8,0,0,3.8,0,8.4c0,9.4,9.5,11.9,16,21.2c6.1-9.3,16-12.1,16-21.2C32,3.8,28.2,0,23.6,0z" />
+            </svg>
+        </div>
+        <div class="heart">
+            <svg viewBox="0 0 32 29.6">
+                <path d="M23.6,0c-3.4,0-6.3,2.7-7.6,5.6C14.7,2.7,11.8,0,8.4,0C3.8,0,0,3.8,0,8.4c0,9.4,9.5,11.9,16,21.2c6.1-9.3,16-12.1,16-21.2C32,3.8,28.2,0,23.6,0z" />
+            </svg>
+        </div>
+        <div class="heart">
+            <svg viewBox="0 0 32 29.6">
+                <path d="M23.6,0c-3.4,0-6.3,2.7-7.6,5.6C14.7,2.7,11.8,0,8.4,0C3.8,0,0,3.8,0,8.4c0,9.4,9.5,11.9,16,21.2c6.1-9.3,16-12.1,16-21.2C32,3.8,28.2,0,23.6,0z" />
+            </svg>
+        </div>
+        <div class="heart">
+            <svg viewBox="0 0 32 29.6">
+                <path d="M23.6,0c-3.4,0-6.3,2.7-7.6,5.6C14.7,2.7,11.8,0,8.4,0C3.8,0,0,3.8,0,8.4c0,9.4,9.5,11.9,16,21.2c6.1-9.3,16-12.1,16-21.2C32,3.8,28.2,0,23.6,0z" />
+            </svg>
+        </div>
+        <div class="heart">
+            <svg viewBox="0 0 32 29.6">
+                <path d="M23.6,0c-3.4,0-6.3,2.7-7.6,5.6C14.7,2.7,11.8,0,8.4,0C3.8,0,0,3.8,0,8.4c0,9.4,9.5,11.9,16,21.2c6.1-9.3,16-12.1,16-21.2C32,3.8,28.2,0,23.6,0z" />
+            </svg>
+        </div>
+        <div class="heart">
+            <svg viewBox="0 0 32 29.6">
+                <path d="M23.6,0c-3.4,0-6.3,2.7-7.6,5.6C14.7,2.7,11.8,0,8.4,0C3.8,0,0,3.8,0,8.4c0,9.4,9.5,11.9,16,21.2c6.1-9.3,16-12.1,16-21.2C32,3.8,28.2,0,23.6,0z" />
+            </svg>
+        </div>
+        <div class="heart">
+            <svg viewBox="0 0 32 29.6">
+                <path d="M23.6,0c-3.4,0-6.3,2.7-7.6,5.6C14.7,2.7,11.8,0,8.4,0C3.8,0,0,3.8,0,8.4c0,9.4,9.5,11.9,16,21.2c6.1-9.3,16-12.1,16-21.2C32,3.8,28.2,0,23.6,0z" />
+            </svg>
+        </div>
+        <div class="heart">
+            <svg viewBox="0 0 32 29.6">
+                <path d="M23.6,0c-3.4,0-6.3,2.7-7.6,5.6C14.7,2.7,11.8,0,8.4,0C3.8,0,0,3.8,0,8.4c0,9.4,9.5,11.9,16,21.2c6.1-9.3,16-12.1,16-21.2C32,3.8,28.2,0,23.6,0z" />
+            </svg>
+        </div>
+        <div class="heart">
+            <svg viewBox="0 0 32 29.6">
+                <path d="M23.6,0c-3.4,0-6.3,2.7-7.6,5.6C14.7,2.7,11.8,0,8.4,0C3.8,0,0,3.8,0,8.4c0,9.4,9.5,11.9,16,21.2c6.1-9.3,16-12.1,16-21.2C32,3.8,28.2,0,23.6,0z" />
+            </svg>
+        </div>
+    </div>
+
 
     <!-- Header & Navigation -->
     <header class="bg-white shadow-md sticky top-0 z-50">
@@ -75,7 +239,7 @@
 
     <main>
         <!-- Hero Section -->
-        <section id="home" >
+        <section id="home">
             <div class="container mx-auto px-6 py-20 md:py-32 flex flex-col md:flex-row items-center">
                 <div class="md:w-1/2 text-center md:text-left mb-10 md:mb-0">
                     <h1 class="text-4xl md:text-5xl font-bold text-pink-900 leading-tight mb-4"> Hailie Tucker</h1>
@@ -94,7 +258,7 @@
         <br />
 
         <!-- About Me & Skills Section -->
-        <section id="about" >
+        <section id="about">
             <div class="container mx-auto px-6">
                 <div class="text-center mb-12">
                     <h2 class="text-3xl font-bold">About Me</h2>
@@ -126,7 +290,7 @@
         <br />
 
         <!-- Experience & Education Section -->
-        <section id="experience" >
+        <section id="experience">
             <div class="container mx-auto px-6">
                 <div class="text-center mb-12">
                     <h2 class="text-3xl font-bold">Experience & Education</h2>
@@ -172,9 +336,9 @@
                 </div>
             </div>
         </section>
-        <br /> 
+        <br />
         <!-- Projects Section -->
-        <section id="projects" >
+        <section id="projects">
             <div class="container mx-auto px-6">
                 <div class="text-center mb-12">
                     <h2 class="text-3xl font-bold">My Projects</h2>
@@ -244,7 +408,7 @@
         <br />
 
         <!-- Contact Section -->
-        <section id="contact" >
+        <section id="contact">
             <div class="container mx-auto px-6 text-center">
                 <h2 class="text-3xl font-bold mb-4">Got something to tell me?</h2>
                 <p class="text-pink-400 md:w-2/3 mx-auto leading-relaxed mb-8">Feel free to reach out to me via email or social media!</p>
