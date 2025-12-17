@@ -220,7 +220,7 @@
 
             <a href="#home"> <img src="Hailie Tucker.png" alt="Hailie Tucker Logo" class="h-20 w-auto"> </a>
             <div class="hidden md:flex space-x-8">
-                <a href="#about" class="text-pink-400 hover:text-rose-700 transition duration-300">About</a>
+                <a href="index.html" class="text-pink-400 hover:text-rose-700 transition duration-300">About</a>
                 <a href="Experience.html" class="text-pink-400 hover:text-rose-700 transition duration-300">Experience</a>
                 <a href="Projects.html" class="text-pink-400 hover:text-rose-700 transition duration-300">Projects</a>
                 <a href="#contact" class="text-pink-400 hover:text-rose-700 transition duration-300">Contact</a>
@@ -231,48 +231,91 @@
         </nav>
         <!-- Mobile Menu -->
         <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
-            <a href="#about" class="block py-3 px-6 text-sm hover:bg-gray-100">About</a>
-            <a href="#Experience.html" class="block py-3 px-6 text-sm hover:bg-gray-100">Experience</a>
+            <a href="index.html" class="block py-3 px-6 text-sm hover:bg-gray-100">About</a>
+            <a href="Experience.html" class="block py-3 px-6 text-sm hover:bg-gray-100">Experience</a>
             <a href="Projects.html" class="block py-3 px-6 text-sm hover:bg-gray-100">Projects</a>
             <a href="#contact" class="block py-3 px-6 text-sm hover:bg-gray-100">Contact</a>
         </div>
     </header>
 
     <main>
-        <!-- Hero Section -->
-        <section id="home">
-            <div class="container mx-auto px-6 py-20 md:py-32 flex flex-col md:flex-row items-center">
-                <div class="md:w-1/2 text-center md:text-left mb-10 md:mb-0">
-                    <h1 class="text-4xl md:text-5xl font-bold text-pink-900 leading-tight mb-4"> Hailie Tucker</h1>
-                    <p class="text-lg md:text-xl text-rose-600 font-semibold mb-6">Aspiring Game Developer & Computer Science Student</p>
-                    <p class="text-pink-400 leading-relaxed mb-8 max-w-lg mx-auto md:mx-0">I'm passionate about connecting with new people and building fun projects! Welcome to my personal portfolio.</p>
-                    <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
-                        <a href="Hailie%20Tucker%20Resume.pdf" target="_blank" class="bg-pink-500 text-white font-bold rounded-full py-3 px-8 shadow-lg uppercase tracking-wider hover:bg-pink-700 transition duration-300 text-center">My Resume</a>
-                        <a href="#contact" class="bg-pink-500 text-white font-bold rounded-full py-3 px-8 shadow-lg uppercase tracking-wider hover:bg-pink-700 transition duration-300 text-center">Hit me up here!</a>
-                    </div>
-                </div>
-                <div class="md:w-1/2 flex justify-center">
-                    <img src="IMG_6627_00.jpeg" alt="A portrait of Hailie Tucker" class="hover:-translate-y-3 w-64 h-64 md:w-80 md:h-80 rounded-full object-cover shadow-2xl border-4 border-white">
-                </div>
-            </div>
-        </section>
-        <br />
 
         <!-- About Me & Skills Section -->
         <section id="about">
             <div class="container mx-auto px-6">
                 <div class="text-center mb-12">
-                    <h2 class="text-3xl font-bold">About Me</h2>
-                </div>
-                <div class="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                
+                <div class="max-w-2xl mx-auto grid gap-12 items-center">
+                   
                     <div>
-                        <h3 class="text-2xl font-semibold mb-4">Who I Am</h3>
-                        <p class="text-pink-400 leading-relaxed mb-4">
-                            I am a  Computer Science student at Florida State University. My journey into tech began with the escape that games allowed in my childhood. Originally I loved math, but as I grew older I found myself drawn to the creativity involved with game dev and programming.
-                        </p>
-                        <p class="text-pink-400 leading-relaxed">
-                            Outside of my academic pursuits, I enjoy contributing to <em>DevLUp</em> or <em>Arcvale</em> Projects, participating in social activities, and learning about game and web development.
-                        </p>
+                        <h3 class="text-2xl text-center font-semibold mb-4">My Skills</h3>
+                        <div class="flex flex-wrap justify-center gap-3">
+                            <span class="hover:-translate-y-3 bg-rose-200 text-pink-700 font-medium text-center py-2 px-4 rounded-full">C++</span>
+                            <span class="hover:-translate-y-3 bg-rose-200 text-pink-700 font-medium text-center py-2 px-4 rounded-full">C#</span>
+                            <span class="hover:-translate-y-3 bg-rose-200 text-pink-700 font-medium text-center py-2 px-4 rounded-full">HTML & CSS</span>
+                            <span class="hover:-translate-y-3 bg-rose-200 text-pink-700 font-medium text-center py-2 px-4 rounded-full">Git & GitHub</span>
+                            <span class="hover:-translate-y-3 bg-rose-200 text-pink-700 font-medium text-center py-2 px-4 rounded-full">Blender</span>
+                            <span class="hover:-translate-y-3 bg-rose-200 text-pink-700 font-medium text-center py-2 px-4 rounded-full">Unity</span>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <br />
+
+        <!-- Experience & Education Section -->
+        <section id="experience">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl font-bold">Experience & Education</h2>
+                    <p class="text-pink-400 mt-2">longer term commitments</p>
+                </div>
+                <div class="max-w-5xl mx-auto">
+                    <!-- Timeline Item 1 -->
+                    <div class="relative pl-8 sm:pl-48 py-6 group">
+                        <div class="flex flex-col sm:flex-row items-start mb-1 group-last:before:hidden before:absolute before:left-2 sm:before:left-0 before:h-full before:px-px before:bg-pink-300 sm:before:ml-[10.5rem] before:self-start before:-translate-x-1/2 before:translate-y-3 after:absolute after:left-2 sm:after:left-0 after:w-2 after:h-2 after:bg-pink-600 after:border-4 after:box-content after:border-pink-50 after:rounded-full sm:after:ml-[10.5rem] after:-translate-x-1/2 after:translate-y-1.5">
+                            <time class="sm:absolute left-0 translate-y-0.5 inline-flex items-center justify-center text-xs font-semibold uppercase min-w-fit px-4 h-6 mb-3 sm:mb-0 text-rose-600 bg-rose-200 rounded-full">Fall 2023 - Present  </time>
+                            <a href="https://www.fsu.edu/" class="text-xl text-pink-900 font-bold hover:underline" target="_blank" rel="noopener noreferrer">Florida State University &rarr;</a>
+                        </div>
+                        <div class="text-pink-800">B.S. in Computer Science</div>
+                        <div class="text-med text-pink-400 mt-1">Relevant Coursework: Computer org 1, VR development, data structures and algoriths 2</div>
+                    </div>
+                    <!-- Timeline Item 2 -->
+                    <div class="relative pl-8 sm:pl-48 py-6 group">
+                        <div class="flex flex-col sm:flex-row items-start mb-1 group-last:before:hidden before:absolute before:left-2 sm:before:left-0 before:h-full before:px-px before:bg-pink-300 sm:before:ml-[10.5rem] before:self-start before:-translate-x-1/2 before:translate-y-3 after:absolute after:left-2 sm:after:left-0 after:w-2 after:h-2 after:bg-pink-600 after:border-4 after:box-content after:border-pink-50 after:rounded-full sm:after:ml-[10.5rem] after:-translate-x-1/2 after:translate-y-1.5">
+                            <time class="sm:absolute left-0 translate-y-0.5 inline-flex items-center justify-center text-xs font-semibold uppercase min-w-fit px-4 h-6 mb-3 sm:mb-0 text-rose-600 bg-rose-200 rounded-full">Summer 2024 - Present  </time>
+                            <a href="https://housing.fsu.edu/future-residents/living-on-campus/residence-life-staff" class="text-xl text-pink-900 font-bold hover:underline" target="_blank" rel="noopener noreferrer">Desk Assistant &rarr;</a>
+                        </div>
+                        <div class="text-pink-800">Desk Assistant at Florida State University </div>
+                        <div class="text-med text-pink-400 mt-1">Worked with a team to cover an assigned hub desk 24 hours a day.</div>
+                    </div>
+                    <!-- Timeline Item 3 -->
+                    <div class="relative pl-8 sm:pl-48 py-6 group">
+                        <div class="flex flex-col sm:flex-row items-start mb-1 group-last:before:hidden before:absolute before:left-2 sm:before:left-0 before:h-full before:px-px before:bg-pink-300 sm:before:ml-[10.5rem] before:self-start before:-translate-x-1/2 before:translate-y-3 after:absolute after:left-2 sm:after:left-0 after:w-2 after:h-2 after:bg-pink-600 after:border-4 after:box-content after:border-pink-50 after:rounded-full sm:after:ml-[10.5rem] after:-translate-x-1/2 after:translate-y-1.5">
+                            <time class="sm:absolute left-0 translate-y-0.5 inline-flex items-center justify-center text-xs font-semibold uppercase w-28 h-6 mb-3 sm:mb-0 text-rose-600 bg-rose-200 rounded-full">Summer 2025 - Present  </time>
+                            <a href="https://arcvale.com/" class="text-xl text-pink-900 font-bold hover:underline" target="_blank" rel="noopener noreferrer">Arcvale &rarr;</a>
+                        </div>
+                        <div class="text-pink-800">Arcvale Intern</div>
+                        <div class="text-med text-pink-400 mt-1"> Worked on UI modifications and minor bug fixes. Collaborated with a team of developers in an agile environment.</div>
+                    </div>
+                    <!-- Timeline Item 4 -->
+                    <div class="relative pl-8 sm:pl-48 py-6 group">
+                        <div class="flex flex-col sm:flex-row items-start mb-1 group-last:before:hidden before:absolute before:left-2 sm:before:left-0 before:h-full before:px-px before:bg-pink-300 sm:before:ml-[10.5rem] before:self-start before:-translate-x-1/2 before:translate-y-3 after:absolute after:left-2 sm:after:left-0 after:w-2 after:h-2 after:bg-pink-600 after:border-4 after:box-content after:border-pink-50 after:rounded-full sm:after:ml-[10.5rem] after:-translate-x-1/2 after:translate-y-1.5">
+                            <time class="sm:absolute left-0 translate-y-0.5 inline-flex items-center justify-center text-xs font-semibold uppercase w-28 h-6 mb-3 sm:mb-0 text-rose-600 bg-rose-200 rounded-full">Fall 2025 - Present</time>
+                            <a href="https://fsu.devlup.org/" class="text-xl text-pink-900 font-bold hover:underline" target="_blank" rel="noopener noreferrer">DevLUp &rarr;</a>
+                        </div>
+                        <div class="text-pink-800">DevLUp Social Chair</div>
+                        <div class="text-med text-pink-400 mt-1"> Created a LinkedIn, and now control the instagram. My main goal is to spread awareness of the club and get new members. So far I have already orchastrated a collab with WiCS (Women in Computer Science) which is a group that falls under the FSU chapter of ACM.</div>
+                    </div>
+                    <!-- Timeline Item 5 -->
+                    <div class="relative pl-8 sm:pl-48 py-6 group">
+                        <div class="flex flex-col sm:flex-row items-start mb-1 group-last:before:hidden before:absolute before:left-2 sm:before:left-0 before:h-full before:px-px before:bg-pink-300 sm:before:ml-[10.5rem] before:self-start before:-translate-x-1/2 before:translate-y-3 after:absolute after:left-2 sm:after:left-0 after:w-2 after:h-2 after:bg-pink-600 after:border-4 after:box-content after:border-pink-50 after:rounded-full sm:after:ml-[10.5rem] after:-translate-x-1/2 after:translate-y-1.5">
+                            <time class="sm:absolute left-0 translate-y-0.5 inline-flex items-center justify-center text-xs font-semibold uppercase w-28 h-6 mb-3 sm:mb-0 text-rose-600 bg-rose-200 rounded-full">Spring 2026 Semester</time>
+                            <a href="https://its.fsu.edu/" class="text-xl text-pink-900 font-bold hover:underline" target="_blank" rel="noopener noreferrer">FSU ITS &rarr;</a>
+                        </div>
+                        <div class="text-pink-800">Emerging Technology Intern</div>
+                        <div class="text-med text-pink-400 mt-1"> I will be working as the Emerging Technology Intern (Working on VR) for Florida State Universitys Information Technology Services under Derek Kooi.</div>
                     </div>
                 </div>
             </div>
@@ -282,8 +325,7 @@
         <!-- Contact Section -->
         <section id="contact">
             <div class="container mx-auto px-6 text-center">
-                <h2 class="text-3xl font-bold mb-4">Got something to tell me?</h2>
-                <p class="text-pink-400 md:w-2/3 mx-auto leading-relaxed mb-8">Feel free to reach out to me via email or social media!</p>
+ 
                 <a href="mailto:hlt22c@fsu.edu" class="bg-pink-400 text-white font-bold rounded-full py-4 px-8 shadow-lg uppercase tracking-wider hover:bg-rose-700 transition duration-300 inline-block mb-8" target="_blank" rel="noopener noreferrer">
                     Email Me
                 </a>

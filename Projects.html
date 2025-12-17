@@ -220,7 +220,7 @@
 
             <a href="#home"> <img src="Hailie Tucker.png" alt="Hailie Tucker Logo" class="h-20 w-auto"> </a>
             <div class="hidden md:flex space-x-8">
-                <a href="#about" class="text-pink-400 hover:text-rose-700 transition duration-300">About</a>
+                <a href="index.html" class="text-pink-400 hover:text-rose-700 transition duration-300">About</a>
                 <a href="Experience.html" class="text-pink-400 hover:text-rose-700 transition duration-300">Experience</a>
                 <a href="Projects.html" class="text-pink-400 hover:text-rose-700 transition duration-300">Projects</a>
                 <a href="#contact" class="text-pink-400 hover:text-rose-700 transition duration-300">Contact</a>
@@ -231,59 +231,99 @@
         </nav>
         <!-- Mobile Menu -->
         <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
-            <a href="#about" class="block py-3 px-6 text-sm hover:bg-gray-100">About</a>
-            <a href="#Experience.html" class="block py-3 px-6 text-sm hover:bg-gray-100">Experience</a>
+            <a href="index.html" class="block py-3 px-6 text-sm hover:bg-gray-100">About</a>
+            <a href="Experience.html" class="block py-3 px-6 text-sm hover:bg-gray-100">Experience</a>
             <a href="Projects.html" class="block py-3 px-6 text-sm hover:bg-gray-100">Projects</a>
             <a href="#contact" class="block py-3 px-6 text-sm hover:bg-gray-100">Contact</a>
         </div>
     </header>
 
     <main>
-        <!-- Hero Section -->
-        <section id="home">
-            <div class="container mx-auto px-6 py-20 md:py-32 flex flex-col md:flex-row items-center">
-                <div class="md:w-1/2 text-center md:text-left mb-10 md:mb-0">
-                    <h1 class="text-4xl md:text-5xl font-bold text-pink-900 leading-tight mb-4"> Hailie Tucker</h1>
-                    <p class="text-lg md:text-xl text-rose-600 font-semibold mb-6">Aspiring Game Developer & Computer Science Student</p>
-                    <p class="text-pink-400 leading-relaxed mb-8 max-w-lg mx-auto md:mx-0">I'm passionate about connecting with new people and building fun projects! Welcome to my personal portfolio.</p>
-                    <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
-                        <a href="Hailie%20Tucker%20Resume.pdf" target="_blank" class="bg-pink-500 text-white font-bold rounded-full py-3 px-8 shadow-lg uppercase tracking-wider hover:bg-pink-700 transition duration-300 text-center">My Resume</a>
-                        <a href="#contact" class="bg-pink-500 text-white font-bold rounded-full py-3 px-8 shadow-lg uppercase tracking-wider hover:bg-pink-700 transition duration-300 text-center">Hit me up here!</a>
-                    </div>
+      
+        <!-- Projects Section -->
+        <section id="projects">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl font-bold">My Projects</h2>
+                    <p class="text-pink-400 mt-3">A selection of projects I've worked on.</p>
                 </div>
-                <div class="md:w-1/2 flex justify-center">
-                    <img src="IMG_6627_00.jpeg" alt="A portrait of Hailie Tucker" class="hover:-translate-y-3 w-64 h-64 md:w-80 md:h-80 rounded-full object-cover shadow-2xl border-4 border-white">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Project Card 1 -->
+                    <div class="bg-white rounded-lg shadow-md overflow-hidden transform hover:-translate-y-2 transition-transform duration-300">
+                        <img src="IMG_7167_00.jpeg" alt="Project 1 Screenshot" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-2">Prawmite</h3>
+                            <p class="text-pink-400 mb-4">Helping on a project thats been in development since 2019. Once released it will  be one of Arcvales biggest games ever!</p>
+                            <a href="https://github.com/ArcvaleStudio/Prawmite" class="text-rose-600 font-semibold hover:underline" target="_blank" rel="noopener noreferrer">View on GitHub &rarr;</a>
+                        </div>
+                    </div>
+                    <!-- Project Card 2 -->
+                    <div class="bg-white rounded-lg shadow-md overflow-hidden transform hover:-translate-y-2 transition-transform duration-300">
+                        <img src="IMG_7183_00.jpeg" alt="Project 2 Screenshot" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-2">Orbital Odyssey</h3>
+                            <p class="text-pink-400 mb-4">My first ever DevLUp Project! I mainly did small 3d blender assets for this.</p>
+                            <a href="https://github.com/devlup-fsu/party-game" class="text-rose-600 font-semibold hover:underline" target="_blank" rel="noopener noreferrer">View on GitHub &rarr;</a>
+                        </div>
+                    </div>
+                    <!-- Project Card 3 -->
+                    <div class="bg-white rounded-lg shadow-md overflow-hidden transform hover:-translate-y-2 transition-transform duration-300">
+                        <img src="IMG_7263_00.jpeg" alt="Project 3 Screenshot" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-2">Dawn of Dion</h3>
+                            <p class="text-pink-400 mb-4">The new 2025-2026 DevLUp Game in which I will play a larger role with coding and git management.</p>
+                            <a href="https://github.com/jake0822/DevLUp-Project-2025-2026" class="text-rose-600 font-semibold hover:underline" target="_blank" rel="noopener noreferrer">View on GitHub &rarr;</a>
+                        </div>
+                    </div>
+                    <!-- Project Card 4 -->
+                    <div class="bg-white rounded-lg shadow-md overflow-hidden transform hover:-translate-y-2 transition-transform duration-300">
+                        <img src="ViverseScreenshot.png" alt="Project 4 Screenshot" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-2">Viverse</h3>
+                            <p class="text-pink-400 mb-4">My VR submission to the Viverse college game creation competition.</p>
+                            <a href="https://hailiet.itch.io/haven" class="text-rose-600 font-semibold hover:underline" target="_blank" rel="noopener noreferrer">View online! &rarr;</a> <br />
+                            <a href="https://github.com/HailieT/Viverse" class="text-rose-600 font-semibold hover:underline" target="_blank" rel="noopener noreferrer">View on GitHub &rarr;</a>
+                        </div>
+                    </div>
+                    <!-- Project Card 5 -->
+                    <div class="bg-white rounded-lg shadow-md overflow-hidden transform hover:-translate-y-2 transition-transform duration-300">
+                        <img src="GameJam2025.jpg" alt="Project 5 picture" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-2">Game Jam</h3>
+                            <p class="text-pink-400 mb-4">I participated with Jacksons team to make a spooky game to be uploaded in itch.</p>
+                            <a href="https://jdevo.itch.io/spidersol" class="text-rose-600 font-semibold hover:underline" target="_blank" rel="noopener noreferrer">View online! &rarr;</a> <br />
+                            <a href="https://github.com/jdevo22/HalloweenGameJam2025" class="text-rose-600 font-semibold hover:underline" target="_blank" rel="noopener noreferrer">View on GitHub &rarr;</a>
+                        </div>
+                    </div>
+                    <!-- Project Card 6 -->
+                    <div class="bg-white rounded-lg shadow-md overflow-hidden transform hover:-translate-y-2 transition-transform duration-300">
+                        <img src="DevLUpWebsite.png" alt="Project 5 picture" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-2">Club Website</h3>
+                            <p class="text-pink-400 mb-4">I created a new website for my club.</p>
+                            <a href="https://devlupfsu.netlify.app/" class="text-rose-600 font-semibold hover:underline" target="_blank" rel="noopener noreferrer">View online! &rarr;</a> <br />
+                            <a href="https://github.com/HailieT/DevLUp" class="text-rose-600 font-semibold hover:underline" target="_blank" rel="noopener noreferrer">View on Github &rarr;</a>
+                        </div>
+                    </div>
+                    <!-- Project Card 7 -->
+                    <div class="bg-white rounded-lg shadow-md overflow-hidden transform hover:-translate-y-2 transition-transform duration-300">
+                        <img src="GameCover.png" alt="Project 5 picture" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-2">Vr Pickleball</h3>
+                            <p class="text-pink-400 mb-4">I created VR Pickleball for a class project</p>
+                            <a href="https://hailiet.itch.io/vrpickleball" class="text-rose-600 font-semibold hover:underline" target="_blank" rel="noopener noreferrer">View online! &rarr;</a> <br />
+                            <a href="https://github.com/HailieT/hlt22cVR1FinalProject" class="text-rose-600 font-semibold hover:underline" target="_blank" rel="noopener noreferrer">View on Github &rarr;</a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
         <br />
 
-        <!-- About Me & Skills Section -->
-        <section id="about">
-            <div class="container mx-auto px-6">
-                <div class="text-center mb-12">
-                    <h2 class="text-3xl font-bold">About Me</h2>
-                </div>
-                <div class="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-                    <div>
-                        <h3 class="text-2xl font-semibold mb-4">Who I Am</h3>
-                        <p class="text-pink-400 leading-relaxed mb-4">
-                            I am a  Computer Science student at Florida State University. My journey into tech began with the escape that games allowed in my childhood. Originally I loved math, but as I grew older I found myself drawn to the creativity involved with game dev and programming.
-                        </p>
-                        <p class="text-pink-400 leading-relaxed">
-                            Outside of my academic pursuits, I enjoy contributing to <em>DevLUp</em> or <em>Arcvale</em> Projects, participating in social activities, and learning about game and web development.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <br />
-        
         <!-- Contact Section -->
         <section id="contact">
             <div class="container mx-auto px-6 text-center">
-                <h2 class="text-3xl font-bold mb-4">Got something to tell me?</h2>
-                <p class="text-pink-400 md:w-2/3 mx-auto leading-relaxed mb-8">Feel free to reach out to me via email or social media!</p>
+                
                 <a href="mailto:hlt22c@fsu.edu" class="bg-pink-400 text-white font-bold rounded-full py-4 px-8 shadow-lg uppercase tracking-wider hover:bg-rose-700 transition duration-300 inline-block mb-8" target="_blank" rel="noopener noreferrer">
                     Email Me
                 </a>
