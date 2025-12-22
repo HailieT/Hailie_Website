@@ -1,0 +1,281 @@
+﻿<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hailie Tucker - 3D Models Portfolio</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Gamja+Flower&display=swap" rel="stylesheet">
+
+    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.3.0/model-viewer.min.js"></script>
+
+    <link rel="icon" href="favicon.ico">
+    <style>
+        body {
+            font-family: 'Gamja Flower', cursive;
+            margin-left: 10%;
+            margin-right: 10%;
+            font-size: 25px;
+            background-image: url('Pink_Blue_Background.gif');
+            background-size: cover;
+            background-position: center;
+            background-attachment: scroll;
+            background-repeat: no-repeat;
+            position: relative;
+            min-height: 100vh;
+        }
+
+        @media (min-width: 768px) {
+            body {
+                background-attachment: fixed;
+            }
+        }
+
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(255, 255, 255, 0.2);
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        main {
+            position: relative;
+            z-index: 1;
+        }
+
+        /* 3D Viewer Square Styles */
+        .model-card {
+            aspect-ratio: 1 / 1;
+            background: rgba(255, 255, 255, 0.4);
+            backdrop-filter: blur(8px);
+            border: 3px solid #f9a8d4; /* pink-300 */
+            border-radius: 24px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+            .model-card:hover {
+                transform: scale(1.02);
+                border-color: #ec4899; /* pink-500 */
+                box-shadow: 0 10px 25px rgba(236, 72, 153, 0.2);
+            }
+
+        model-viewer {
+            width: 100%;
+            height: 100%;
+            --poster-color: transparent;
+        }
+
+        /* Floating Hearts Animation */
+        .heart {
+            position: fixed;
+            width: 30px;
+            height: 30px;
+            pointer-events: none;
+            animation: float 15s infinite;
+            z-index: 1;
+            opacity: 0;
+        }
+
+            .heart svg {
+                width: 100%;
+                height: 100%;
+                fill: #ec4899;
+                opacity: 0.6;
+                filter: drop-shadow(0 0 3px rgba(236, 72, 153, 0.4));
+            }
+
+        @keyframes float {
+            0% {
+                transform: translateY(100vh) rotate(0deg) scale(0.5);
+                opacity: 0;
+            }
+
+            10% {
+                opacity: 0.8;
+            }
+
+            90% {
+                opacity: 0.8;
+            }
+
+            100% {
+                transform: translateY(-100vh) rotate(360deg) scale(1);
+                opacity: 0;
+            }
+        }
+
+        /* Heart Staggering */
+        .heart:nth-child(1) {
+            left: 10%;
+            animation-delay: 0s;
+            width: 25px;
+        }
+
+        .heart:nth-child(2) {
+            left: 20%;
+            animation-delay: 3s;
+            width: 20px;
+        }
+
+        .heart:nth-child(3) {
+            left: 30%;
+            animation-delay: 6s;
+            width: 28px;
+        }
+
+        .heart:nth-child(4) {
+            left: 40%;
+            animation-delay: 2s;
+            width: 22px;
+        }
+
+        .heart:nth-child(5) {
+            left: 50%;
+            animation-delay: 8s;
+            width: 30px;
+        }
+
+        .heart:nth-child(6) {
+            left: 60%;
+            animation-delay: 4s;
+            width: 26px;
+        }
+
+        .heart:nth-child(7) {
+            left: 70%;
+            animation-delay: 7s;
+            width: 24px;
+        }
+
+        .heart:nth-child(8) {
+            left: 80%;
+            animation-delay: 1s;
+            width: 21px;
+        }
+
+        .heart:nth-child(9) {
+            left: 90%;
+            animation-delay: 5s;
+            width: 27px;
+        }
+
+        .heart:nth-child(10) {
+            left: 15%;
+            animation-delay: 9s;
+            width: 23px;
+        }
+    </style>
+</head>
+<body class="text-pink-800">
+
+    <div class="hearts-container">
+        <script>
+            for (let i = 0; i < 10; i++) {
+                document.write(`
+                            <div class="heart">
+                                <svg viewBox="0 0 32 29.6">
+                                    <path d="M23.6,0c-3.4,0-6.3,2.7-7.6,5.6C14.7,2.7,11.8,0,8.4,0C3.8,0,0,3.8,0,8.4c0,9.4,9.5,11.9,16,21.2c6.1-9.3,16-12.1,16-21.2C32,3.8,28.2,0,23.6,0z" />
+                                </svg>
+                            </div>
+                        `);
+            }
+        </script>
+    </div>
+
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html"> <img src="Hailie Tucker.png" alt="Hailie Tucker Logo" class="h-20 w-auto"> </a>
+            <div class="hidden md:flex space-x-8">
+                <a href="index.html" class="text-pink-400 hover:text-rose-700 transition duration-300">About</a>
+                <a href="Experience.html" class="text-pink-400 hover:text-rose-700 transition duration-300">Experience</a>
+                <a href="Projects.html" class="text-pink-400 hover:text-rose-700 transition duration-300">Projects</a>
+                <a href="3DModels.html" class="text-pink-400 hover:text-rose-700 transition duration-300 border-b-2 border-pink-400">3DModels</a>
+            </div>
+            <button id="mobile-menu-button" class="md:hidden flex items-center p-2">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            </button>
+        </nav>
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
+            <a href="index.html" class="block py-3 px-6 text-sm hover:bg-gray-100">About</a>
+            <a href="Experience.html" class="block py-3 px-6 text-sm hover:bg-gray-100">Experience</a>
+            <a href="Projects.html" class="block py-3 px-6 text-sm hover:bg-gray-100">Projects</a>
+            <a href="3DModels.html" class="block py-3 px-6 text-sm hover:bg-gray-100">3DModels</a>
+        </div>
+    </header>
+
+    <main class="py-10">
+        <section id="gallery" class="mb-16">
+            <h2 class="text-4xl font-bold text-center text-pink-600 mb-12">My Blender Creations</h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+
+                <div class="flex flex-col items-center">
+                    <div class="model-card shadow-lg">
+                        <model-viewer src="PickleBall.glb"
+                                      alt="A 3D model of a Pickleball"
+                                      auto-rotate
+                                      camera-controls
+                                      shadow-intensity="1"
+                                      camera-orbit="0deg 75deg 105%"
+                                      bounds="tight">
+                        </model-viewer>
+                    </div>
+                    <span class="mt-4 font-semibold text-pink-700">Pickleball</span>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="contact">
+            <div class="container mx-auto px-6 text-center">
+                <a href="mailto:hlt22c@fsu.edu" class="bg-pink-400 text-white font-bold rounded-full py-4 px-8 shadow-lg uppercase tracking-wider hover:bg-rose-700 transition duration-300 inline-block mb-8" target="_blank" rel="noopener noreferrer">
+                    Email Me
+                </a>
+                <div class="flex justify-center space-x-6">
+                    <a href="https://github.com/HailieT" target="_blank" class="text-pink-400 hover:text-rose-600 transition duration-300">
+                        <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.168 6.838 9.49.5.092.682-.217.682-.482 0-.237-.009-.868-.014-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.031-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.203 2.398.1 2.651.64.7 1.03 1.595 1.03 2.688 0 3.848-2.338 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.001 10.001 0 0022 12c0-5.523-4.477-10-10-10z" /></svg>
+                    </a>
+                    <a href="https://www.linkedin.com/in/hailie-tucker-b56725300/" target="_blank" class="text-pink-400 hover:text-rose-600 transition duration-300">
+                        <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" /></svg>
+                    </a>
+                    <a href="https://www.instagram.com/hailiethehuman/" target="_blank" class="text-pink-400 hover:text-rose-600 transition duration-300">
+                        <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.162 6.162 6.162 6.162-2.759 6.162-6.162-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4s1.791-4 4-4 4 1.79 4 4-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44 1.441-.645 1.441-1.44-.645-1.44-1.441-1.44z" /></svg>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-rose-800 text-white py-6">
+        <div class="container mx-auto px-6 text-center">
+            <p>&copy; 2025 Hailie Tucker. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+    </script>
+
+</body>
+</html>
