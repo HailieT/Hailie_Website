@@ -14,7 +14,7 @@
             margin-right: 10%;
             border-block-color: pink;
             font-size: 25px;
-            background-image: url('Pink_Blue_Background.gif');
+            /* background-image: url('Pink_Blue_Background.gif');*/
             background-size: cover;
             background-position: center;
             background-attachment: scroll;
@@ -159,6 +159,12 @@
     </style>
 </head>
 <body class="text-pink-800">
+
+    <video autoplay muted loop playsinline id="bg-video"
+           style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: -1;">
+        <source src="Pink_Blue_Background.mp4" type="video/mp4">
+    </video>
+
     <!-- Floating Hearts -->
     <div class="hearts-container">
         <div class="heart">
@@ -239,7 +245,7 @@
     </header>
 
     <main>
-      
+
         <!-- Projects Section -->
         <section id="projects">
             <div class="container mx-auto px-6">
@@ -323,7 +329,7 @@
         <!-- Contact Section -->
         <section id="contact">
             <div class="container mx-auto px-6 text-center">
-                
+
                 <a href="mailto:hlt22c@fsu.edu" class="bg-pink-400 text-white font-bold rounded-full py-4 px-8 shadow-lg uppercase tracking-wider hover:bg-rose-700 transition duration-300 inline-block mb-8" target="_blank" rel="noopener noreferrer">
                     Email Me
                 </a>
