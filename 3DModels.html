@@ -211,6 +211,7 @@
     <main class="py-12">
         <h1 class="text-4xl font-bold text-center text-pink-600 mb-12">3D Gallery</h1>
 
+        /* first model */
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
             <div class="flex flex-col items-center">
                 <div class="model-card shadow-lg">
@@ -224,6 +225,25 @@
                 </div>
                 <span class="mt-4 font-semibold text-pink-700">Pickleball</span>
                 <a href="PickleBall.glb" download class="mt-2 text-sm bg-white text-pink-500 px-4 py-1 rounded-full border border-pink-300 hover:bg-pink-500 hover:text-white transition flex items-center gap-2">
+                    Download .GLB
+                </a>
+                <br />
+            </div>
+        </div>
+        /* second model */
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+            <div class="flex flex-col items-center">
+                <div class="model-card shadow-lg">
+                    <model-viewer src="Snowman.glb"
+                                  alt="3D Snowman Model"
+                                  loading="eager"
+                                  auto-rotate
+                                  camera-controls
+                                  shadow-intensity="1">
+                    </model-viewer>
+                </div>
+                <span class="mt-4 font-semibold text-pink-700">Snowman</span>
+                <a href="Snowman.glb" download class="mt-2 text-sm bg-white text-pink-500 px-4 py-1 rounded-full border border-pink-300 hover:bg-pink-500 hover:text-white transition flex items-center gap-2">
                     Download .GLB
                 </a>
                 <br />
