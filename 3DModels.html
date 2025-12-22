@@ -17,20 +17,26 @@
             margin-right: 10%;
             border-block-color: pink;
             font-size: 25px;
-            /* background-image: url('Pink_Blue_Static.jpg');*/
-            background-size: cover;
-            background-position: center;
-            background-attachment: scroll;
-            background-repeat: no-repeat;
             position: relative;
             min-height: 100vh;
+            color: #831843; /* text-pink-900 */
+        }
+        /* Video Background Styling */
+        #bg-video {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
         }
 
-        @media (min-width: 768px) {
+        /*  @media (min-width: 768px) {
             body {
                 background-attachment: fixed;
             }
-        }
+        }*/
 
         body::before {
             content: '';
@@ -51,7 +57,7 @@
 
         .model-card {
             width: 100%;
-            max-width: 400px; /* Ensures a good size on desktop */
+            max-width: 400px;
             aspect-ratio: 1 / 1;
             background: rgba(255, 255, 255, 0.4);
             backdrop-filter: blur(8px);
@@ -73,7 +79,6 @@
         model-viewer {
             width: 100%;
             height: 100%;
-            display: block;
             background-color: transparent;
         }
 
@@ -169,10 +174,8 @@
 </head>
 <body class="text-pink-800">
 
-    <video autoplay muted loop playsinline id="bg-video"
-           style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: -1;">
+    <video autoplay muted loop playsinline id="bg-video">
         <source src="Pink_Blue_Background.mp4" type="video/mp4">
-        <div style="position: fixed; width: 100%; height: 100%; background: #ffe4e6; z-index: -1;"></div>
     </video>
 
     <div class="hearts-container">
@@ -210,23 +213,19 @@
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
             <div class="flex flex-col items-center">
                 <div class="model-card shadow-lg">
-                    <model-viewer src="PickleBall-v2.glb"
+                    <model-viewer src="PickleBall.glb"
                                   alt="3D Pickleball Model"
-                                  loading="lazy"
-                                  reveal="interaction"
-                                  power-preference="low-power"
+                                  loading="eager"
                                   auto-rotate
                                   camera-controls
-                                  shadow-intensity="1"
-                                  auto-rotate-delay="0"
-                                  interaction-prompt="auto">
+                                  shadow-intensity="1">
                     </model-viewer>
                 </div>
                 <span class="mt-4 font-semibold text-pink-700">Pickleball</span>
-                <a href="PickleBall.glb" download="PickleBall.glb" class="mt-2 text-sm bg-white text-pink-500 px-4 py-1 rounded-full border border-pink-300 hover:bg-pink-500 hover:text-white transition flex items-center gap-2">
-                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg>
+                <a href="PickleBall.glb" download class="mt-2 text-sm bg-white text-pink-500 px-4 py-1 rounded-full border border-pink-300 hover:bg-pink-500 hover:text-white transition flex items-center gap-2">
                     Download .GLB
                 </a>
+                <br />
             </div>
         </div>
 
