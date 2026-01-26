@@ -156,6 +156,15 @@
             width: 23px;
             height: 23px;
         }
+        .reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s ease-out;
+}
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
     </style>
 </head>
 <body class="text-pink-800">
@@ -279,7 +288,7 @@
                 </div>
                 <div class="max-w-5xl mx-auto">
                     <!-- Timeline Item 1 -->
-                    <div class="relative pl-8 sm:pl-48 py-6 group">
+                    <div class="model-card reveal relative pl-8 sm:pl-48 py-6 group">
                         <div class="flex flex-col sm:flex-row items-start mb-1 group-last:before:hidden before:absolute before:left-2 sm:before:left-0 before:h-full before:px-px before:bg-pink-300 sm:before:ml-[10.5rem] before:self-start before:-translate-x-1/2 before:translate-y-3 after:absolute after:left-2 sm:after:left-0 after:w-2 after:h-2 after:bg-pink-600 after:border-4 after:box-content after:border-pink-50 after:rounded-full sm:after:ml-[10.5rem] after:-translate-x-1/2 after:translate-y-1.5">
                             <time class="sm:absolute left-0 translate-y-0.5 inline-flex items-center justify-center text-xs font-semibold uppercase min-w-fit px-4 h-6 mb-3 sm:mb-0 text-rose-600 bg-rose-200 rounded-full">Fall 2023 - Present  </time>
                             <a href="https://www.fsu.edu/" class="text-xl text-pink-900 font-bold hover:underline" target="_blank" rel="noopener noreferrer">Florida State University &rarr;</a>
@@ -288,7 +297,7 @@
                         <div class="text-med text-pink-400 mt-1">Relevant Coursework: Computer org 1, VR development, data structures and algoriths 2</div>
                     </div>
                     <!-- Timeline Item 2 -->
-                    <div class="relative pl-8 sm:pl-48 py-6 group">
+                    <div class="model-card reveal relative pl-8 sm:pl-48 py-6 group">
                         <div class="flex flex-col sm:flex-row items-start mb-1 group-last:before:hidden before:absolute before:left-2 sm:before:left-0 before:h-full before:px-px before:bg-pink-300 sm:before:ml-[10.5rem] before:self-start before:-translate-x-1/2 before:translate-y-3 after:absolute after:left-2 sm:after:left-0 after:w-2 after:h-2 after:bg-pink-600 after:border-4 after:box-content after:border-pink-50 after:rounded-full sm:after:ml-[10.5rem] after:-translate-x-1/2 after:translate-y-1.5">
                             <time class="sm:absolute left-0 translate-y-0.5 inline-flex items-center justify-center text-xs font-semibold uppercase min-w-fit px-4 h-6 mb-3 sm:mb-0 text-rose-600 bg-rose-200 rounded-full">Summer 2024 - Present  </time>
                             <a href="https://housing.fsu.edu/future-residents/living-on-campus/residence-life-staff" class="text-xl text-pink-900 font-bold hover:underline" target="_blank" rel="noopener noreferrer">Desk Assistant &rarr;</a>
@@ -297,7 +306,7 @@
                         <div class="text-med text-pink-400 mt-1">Worked with a team to cover an assigned hub desk 24 hours a day.</div>
                     </div>
                     <!-- Timeline Item 3 -->
-                    <div class="relative pl-8 sm:pl-48 py-6 group">
+                    <div class="model-card reveal relative pl-8 sm:pl-48 py-6 group">
                         <div class="flex flex-col sm:flex-row items-start mb-1 group-last:before:hidden before:absolute before:left-2 sm:before:left-0 before:h-full before:px-px before:bg-pink-300 sm:before:ml-[10.5rem] before:self-start before:-translate-x-1/2 before:translate-y-3 after:absolute after:left-2 sm:after:left-0 after:w-2 after:h-2 after:bg-pink-600 after:border-4 after:box-content after:border-pink-50 after:rounded-full sm:after:ml-[10.5rem] after:-translate-x-1/2 after:translate-y-1.5">
                             <time class="sm:absolute left-0 translate-y-0.5 inline-flex items-center justify-center text-xs font-semibold uppercase w-28 h-6 mb-3 sm:mb-0 text-rose-600 bg-rose-200 rounded-full">Summer 2025 - Present  </time>
                             <a href="https://arcvale.com/" class="text-xl text-pink-900 font-bold hover:underline" target="_blank" rel="noopener noreferrer">Arcvale &rarr;</a>
@@ -306,7 +315,7 @@
                         <div class="text-med text-pink-400 mt-1"> Worked on UI modifications and minor bug fixes. Collaborated with a team of developers in an agile environment.</div>
                     </div>
                     <!-- Timeline Item 4 -->
-                    <div class="relative pl-8 sm:pl-48 py-6 group">
+                    <div class="model-card reveal relative pl-8 sm:pl-48 py-6 group">
                         <div class="flex flex-col sm:flex-row items-start mb-1 group-last:before:hidden before:absolute before:left-2 sm:before:left-0 before:h-full before:px-px before:bg-pink-300 sm:before:ml-[10.5rem] before:self-start before:-translate-x-1/2 before:translate-y-3 after:absolute after:left-2 sm:after:left-0 after:w-2 after:h-2 after:bg-pink-600 after:border-4 after:box-content after:border-pink-50 after:rounded-full sm:after:ml-[10.5rem] after:-translate-x-1/2 after:translate-y-1.5">
                             <time class="sm:absolute left-0 translate-y-0.5 inline-flex items-center justify-center text-xs font-semibold uppercase w-28 h-6 mb-3 sm:mb-0 text-rose-600 bg-rose-200 rounded-full">Fall 2025 - Present</time>
                             <a href="https://fsu.devlup.org/" class="text-xl text-pink-900 font-bold hover:underline" target="_blank" rel="noopener noreferrer">DevLUp &rarr;</a>
@@ -315,7 +324,7 @@
                         <div class="text-med text-pink-400 mt-1"> Created a LinkedIn, and now control the instagram. My main goal is to spread awareness of the club and get new members. So far I have already orchastrated a collab with WiCS (Women in Computer Science) which is a group that falls under the FSU chapter of ACM.</div>
                     </div>
                     <!-- Timeline Item 5 -->
-                    <div class="relative pl-8 sm:pl-48 py-6 group">
+                    <div class="model-card reveal relative pl-8 sm:pl-48 py-6 group">
                         <div class="flex flex-col sm:flex-row items-start mb-1 group-last:before:hidden before:absolute before:left-2 sm:before:left-0 before:h-full before:px-px before:bg-pink-300 sm:before:ml-[10.5rem] before:self-start before:-translate-x-1/2 before:translate-y-3 after:absolute after:left-2 sm:after:left-0 after:w-2 after:h-2 after:bg-pink-600 after:border-4 after:box-content after:border-pink-50 after:rounded-full sm:after:ml-[10.5rem] after:-translate-x-1/2 after:translate-y-1.5">
                             <time class="sm:absolute left-0 translate-y-0.5 inline-flex items-center justify-center text-xs font-semibold uppercase w-28 h-6 mb-3 sm:mb-0 text-rose-600 bg-rose-200 rounded-full">Spring 2026 Semester</time>
                             <a href="https://its.fsu.edu/" class="text-xl text-pink-900 font-bold hover:underline" target="_blank" rel="noopener noreferrer">FSU ITS &rarr;</a>
@@ -335,7 +344,7 @@
                 <a href="mailto:hlt22c@fsu.edu" class="bg-pink-400 text-white font-bold rounded-full py-4 px-8 shadow-lg uppercase tracking-wider hover:bg-rose-700 transition duration-300 inline-block mb-8" target="_blank" rel="noopener noreferrer">
                     Email Me
                 </a>
-                <div class="flex justify-center space-x-6">
+                <div class="model-card reveal flex justify-center space-x-6">
                     <a href="https://github.com/HailieT" target="_blank" rel="noopener noreferrer" class="text-pink-400 hover:text-rose-600 transition duration-300">
                         <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="false"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.168 6.838 9.49.5.092.682-.217.682-.482 0-.237-.009-.868-.014-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.031-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.203 2.398.1 2.651.64.7 1.03 1.595 1.03 2.688 0 3.848-2.338 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.001 10.001 0 0022 12c0-5.523-4.477-10-10-10z" clip-rule="evenodd" /></svg>
                     </a>
@@ -384,7 +393,20 @@
             });
         });
     </script>
-
+<script>
+    window.addEventListener('scroll', reveal);
+    function reveal() {
+        var reveals = document.querySelectorAll('.reveal');
+        for (var i = 0; i < reveals.length; i++) {
+            var windowHeight = window.innerHeight;
+            var elementTop = reveals[i].getBoundingClientRect().top;
+            var elementVisible = 150;
+            if (elementTop < windowHeight - elementVisible) {
+                reveals[i].classList.add('active');
+            }
+        }
+    }
+</script>
 </body>
 </html>
 

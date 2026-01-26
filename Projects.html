@@ -156,6 +156,24 @@
             width: 23px;
             height: 23px;
         }
+        .reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s ease-out;
+}
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+/* Hide scrollbar for Chrome, Safari and Opera */
+.no-scrollbar::-webkit-scrollbar {
+    display: none;
+}
+/* Hide scrollbar for IE, Edge and Firefox */
+.no-scrollbar {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
     </style>
 </head>
 <body class="text-pink-800">
@@ -247,16 +265,20 @@
     <main>
 
         <!-- Projects Section -->
-        <section id="projects">
-            <div class="container mx-auto px-6">
-                <div class="text-center mb-12">
-                    <h2 class="text-3xl font-bold">My Projects</h2>
-                    <p class="text-pink-400 mt-3">A selection of projects I've worked on.</p>
-                </div>
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <section id="projects" class="reveal relative max-w-[95%] mx-auto">
+    <div class="text-center mb-8">
+        <h2 class="text-3xl font-bold">My Projects</h2>
+        <p class="text-pink-400 mt-3">Swipe or click to explore what I've built!</p>
+    </div>
+    <div class="relative group">
+        <button onclick="scrollCarousel('left')" class="hidden md:block absolute left-2 top-1/2 -translate-y-1/2 z-10 bg-white/70 hover:bg-white text-pink-600 p-3 rounded-full shadow-lg transition-all backdrop-blur-sm">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
+        </button>
+        <div id="project-slider" class="flex overflow-x-auto gap-8 py-8 px-4 snap-x snap-mandatory scroll-smooth no-scrollbar">
+            
+            
                     <!-- Project Card 1 -->
-                    <div class="bg-white rounded-lg shadow-md overflow-hidden transform hover:-translate-y-2 transition-transform duration-300">
-                        <img src="IMG_7167_00.jpeg" alt="Project 1 Screenshot" class="w-full h-48 object-cover">
+<div class="snap-center shrink-0 w-[85vw] md:w-[500px] bg-white rounded-lg shadow-md overflow-hidden transform hover:-translate-y-2 transition-transform duration-300">                        <img src="IMG_7167_00.jpeg" alt="Project 1 Screenshot" class="w-full h-48 object-cover">
                         <div class="p-6">
                             <h3 class="text-xl font-bold mb-2">Prawmite</h3>
                             <p class="text-pink-400 mb-4">Helping on a project thats been in development since 2019. Once released it will  be one of Arcvales biggest games ever!</p>
@@ -264,8 +286,7 @@
                         </div>
                     </div>
                     <!-- Project Card 2 -->
-                    <div class="bg-white rounded-lg shadow-md overflow-hidden transform hover:-translate-y-2 transition-transform duration-300">
-                        <img src="IMG_7183_00.jpeg" alt="Project 2 Screenshot" class="w-full h-48 object-cover">
+<div class="snap-center shrink-0 w-[85vw] md:w-[500px] bg-white rounded-lg shadow-md overflow-hidden transform hover:-translate-y-2 transition-transform duration-300">                        <img src="IMG_7183_00.jpeg" alt="Project 2 Screenshot" class="w-full h-48 object-cover">
                         <div class="p-6">
                             <h3 class="text-xl font-bold mb-2">Orbital Odyssey</h3>
                             <p class="text-pink-400 mb-4">My first ever DevLUp Project! I mainly did small 3d blender assets for this.</p>
@@ -273,8 +294,7 @@
                         </div>
                     </div>
                     <!-- Project Card 3 -->
-                    <div class="bg-white rounded-lg shadow-md overflow-hidden transform hover:-translate-y-2 transition-transform duration-300">
-                        <img src="IMG_7263_00.jpeg" alt="Project 3 Screenshot" class="w-full h-48 object-cover">
+<div class="snap-center shrink-0 w-[85vw] md:w-[500px] bg-white rounded-lg shadow-md overflow-hidden transform hover:-translate-y-2 transition-transform duration-300">                        <img src="IMG_7263_00.jpeg" alt="Project 3 Screenshot" class="w-full h-48 object-cover">
                         <div class="p-6">
                             <h3 class="text-xl font-bold mb-2">Dawn of Dion</h3>
                             <p class="text-pink-400 mb-4">The new 2025-2026 DevLUp Game in which I will play a larger role with coding and git management.</p>
@@ -282,8 +302,7 @@
                         </div>
                     </div>
                     <!-- Project Card 4 -->
-                    <div class="bg-white rounded-lg shadow-md overflow-hidden transform hover:-translate-y-2 transition-transform duration-300">
-                        <img src="ViverseScreenshot.png" alt="Project 4 Screenshot" class="w-full h-48 object-cover">
+<div class="snap-center shrink-0 w-[85vw] md:w-[500px] bg-white rounded-lg shadow-md overflow-hidden transform hover:-translate-y-2 transition-transform duration-300">                        <img src="ViverseScreenshot.png" alt="Project 4 Screenshot" class="w-full h-48 object-cover">
                         <div class="p-6">
                             <h3 class="text-xl font-bold mb-2">Viverse</h3>
                             <p class="text-pink-400 mb-4">My VR submission to the Viverse college game creation competition.</p>
@@ -292,8 +311,7 @@
                         </div>
                     </div>
                     <!-- Project Card 5 -->
-                    <div class="bg-white rounded-lg shadow-md overflow-hidden transform hover:-translate-y-2 transition-transform duration-300">
-                        <img src="GameJam2025.jpg" alt="Project 5 picture" class="w-full h-48 object-cover">
+<div class="snap-center shrink-0 w-[85vw] md:w-[500px] bg-white rounded-lg shadow-md overflow-hidden transform hover:-translate-y-2 transition-transform duration-300">                        <img src="GameJam2025.jpg" alt="Project 5 picture" class="w-full h-48 object-cover">
                         <div class="p-6">
                             <h3 class="text-xl font-bold mb-2">Game Jam</h3>
                             <p class="text-pink-400 mb-4">I participated with Jacksons team to make a spooky game to be uploaded in itch.</p>
@@ -302,8 +320,7 @@
                         </div>
                     </div>
                     <!-- Project Card 6 -->
-                    <div class="bg-white rounded-lg shadow-md overflow-hidden transform hover:-translate-y-2 transition-transform duration-300">
-                        <img src="DevLUpWebsite.png" alt="Project 6 picture" class="w-full h-48 object-cover">
+<div class="snap-center shrink-0 w-[85vw] md:w-[500px] bg-white rounded-lg shadow-md overflow-hidden transform hover:-translate-y-2 transition-transform duration-300">                        <img src="DevLUpWebsite.png" alt="Project 6 picture" class="w-full h-48 object-cover">
                         <div class="p-6">
                             <h3 class="text-xl font-bold mb-2">Club Website</h3>
                             <p class="text-pink-400 mb-4">I created a new website for my club.</p>
@@ -312,8 +329,7 @@
                         </div>
                     </div>
                     <!-- Project Card 7 -->
-                    <div class="bg-white rounded-lg shadow-md overflow-hidden transform hover:-translate-y-2 transition-transform duration-300">
-                        <img src="GameCover.png" alt="Project 7 picture" class="w-full h-48 object-cover">
+<div class="snap-center shrink-0 w-[85vw] md:w-[500px] bg-white rounded-lg shadow-md overflow-hidden transform hover:-translate-y-2 transition-transform duration-300">                        <img src="GameCover.png" alt="Project 7 picture" class="w-full h-48 object-cover">
                         <div class="p-6">
                             <h3 class="text-xl font-bold mb-2">Vr Pickleball</h3>
                             <p class="text-pink-400 mb-4">I created VR Pickleball for a class project</p>
@@ -322,8 +338,7 @@
                         </div>
                     </div>
                     <!-- Project Card 8 -->
-                    <div class="bg-white rounded-lg shadow-md overflow-hidden transform hover:-translate-y-2 transition-transform duration-300">
-                        <img src="IceCreamTruck.png" alt="Project 8 picture" class="w-full h-48 object-cover">
+<div class="snap-center shrink-0 w-[85vw] md:w-[500px] bg-white rounded-lg shadow-md overflow-hidden transform hover:-translate-y-2 transition-transform duration-300">                        <img src="IceCreamTruck.png" alt="Project 8 picture" class="w-full h-48 object-cover">
                         <div class="p-6">
                             <h3 class="text-xl font-bold mb-2">Nakai's Icecream Truck Website</h3>
                             <p class="text-pink-400 mb-4">Working on a website for a small icecream buisness</p>
@@ -331,13 +346,16 @@
                         </div>
                     </div>
                 </div>
+                <button onclick="scrollCarousel('right')" class="hidden md:block absolute right-2 top-1/2 -translate-y-1/2 z-10 bg-white/70 hover:bg-white text-pink-600 p-3 rounded-full shadow-lg transition-all backdrop-blur-sm">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+            </button>
             </div>
         </section>
         <br />
 
         <!-- Contact Section -->
         <section id="contact">
-            <div class="container mx-auto px-6 text-center">
+            <div class="model-card reveal container mx-auto px-6 text-center">
 
                 <a href="mailto:hlt22c@fsu.edu" class="bg-pink-400 text-white font-bold rounded-full py-4 px-8 shadow-lg uppercase tracking-wider hover:bg-rose-700 transition duration-300 inline-block mb-8" target="_blank" rel="noopener noreferrer">
                     Email Me
@@ -391,7 +409,44 @@
             });
         });
     </script>
-
+<script>
+    window.addEventListener('scroll', reveal);
+    function reveal() {
+        var reveals = document.querySelectorAll('.reveal');
+        for (var i = 0; i < reveals.length; i++) {
+            var windowHeight = window.innerHeight;
+            var elementTop = reveals[i].getBoundingClientRect().top;
+            var elementVisible = 150;
+            if (elementTop < windowHeight - elementVisible) {
+                reveals[i].classList.add('active');
+            }
+        }
+    }   
+</script>
+<script>
+    function scrollCarousel(direction) {
+        const container = document.getElementById('project-slider');
+        const scrollAmount = 530; // Approx card width + gap
+        const maxScroll = container.scrollWidth - container.clientWidth;
+        
+        if (direction === 'left') {
+            // If we are at the start, loop to the end
+            if (container.scrollLeft <= 10) {
+                 container.scrollTo({ left: maxScroll, behavior: 'smooth' });
+            } else {
+                 container.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+            }
+        } else {
+            // If we are at the end, loop to the start
+            // (We use a small buffer of 10px because scroll math can be slightly off)
+            if (container.scrollLeft >= maxScroll - 10) {
+                container.scrollTo({ left: 0, behavior: 'smooth' });
+            } else {
+                container.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+            }
+        }
+    }
+</script>
 </body>
 </html>
 
